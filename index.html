@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+
+        body {
+            /* background-color: bisque; */
+            /* border: 2px solid black; */
+            font-family: 'Baloo 2', cursive;
+            flex-wrap: wrap;
+
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+
+        .container {
+            width: 1000px;
+            height: 1000px;
+            /* background-color: #ffccff; */
+            margin: 0 auto;
+            padding: 15px;
+            box-shadow: 0 0 10px black;
+            border: 2px solid black
+                /* display: flex; */
+        }
+
+        .resume {
+            display: flex;
+
+
+        }
+
+        
+
+        .left {
+            flex: 0 0 20%;
+            background-color: #009999;
+            /* width: 400px; */
+            /* height: 185px; */
+            /* border-radius: 55%; */
+
+        }
+
+        .left h5 {
+            color:white;
+            font-size: 15spx;
+        }
+
+        .right {
+            flex: 0 0 60%;
+
+            /* background-color: darkgoldenrod; */
+        }
+
+        img {
+            height: 120px;
+            width: 100px;
+            border-radius: 50%;
+            padding-left: 2px;
+            padding-top: 2px;
+            margin-right: 10px;
+            /* margin-left: 2px; */
+
+
+        }
+        .imagecontainer{
+            display: flex;
+            height: 150px;
+            width: 400px;
+            background-color: #6600cc;
+        }
+
+        .img {
+            width: 100px;
+            height: 120px;
+            /* margin: 0px auto; */
+            padding: 5px;
+            margin-top: 5px;
+            margin-left: 15px;
+            /* padding-left: 20px; */
+            /* padding-top: 5px; */
+            background-color: white;
+            /* border: 2px solid black; */
+            border-radius: 50%;
+        }
+        .detailscontainer{
+            padding-left: 30px;
+            font-size: 20px;
+
+        }
+        .personaldetails{
+            background-color:white;
+            margin: 20px;
+            /* font-size: 40px; */
+        }
+        .personaldetails h4{
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin-left: 100px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: white;
+
+        }
+        .personaldetails ul{
+            list-style: none;
+            color: black;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .hobbies{
+            background-color:#009999;
+            height: 551px;
+            width: 400px;
+        }
+        .hobbies h4{
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 25px;
+            margin-top: 20px;
+            margin-left: 130px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: white;
+            font-size: 20px;
+        }
+        .hobbies ul{
+            list-style:circle;
+            color: white;
+            margin-left: 100px;
+            font-size: 30px;
+        }
+        .Workingexperience h4{
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 2px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .careerobjective h4 {
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 20px;
+
+
+            text-transform:uppercase;
+            font-size: 22px;
+            color: white;
+            /* border-radius: 50%; */
+        }
+
+        .careerobjective p {
+            background-color:#0000cc;
+            display: inline-block;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            text-transform: capitalize;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .academicqualification h4 {
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 2px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            font-size: 22px;
+            color: white;
+            /* border-radius: 20%; */
+        }
+
+        .academicqualification table {
+            margin-top: 20px;
+            /* justify-content: 40px; */
+            /* align-items: center; */
+            /* padding-left: 20px; */
+            font-size: 20px;
+            margin-left: 20px;
+            padding: 8px;
+            /* table-layout: none; */
+            /* table-layout:inherit; */
+            /* display: inline-block; */
+            /* height: 120px; */
+            /* width: 20px; */
+            /* border: 2px solid black; */
+        }
+        .academicqualification table tr th{
+            background-color:#6600cc;
+            color: white;
+            font-size: 25px;
+        }
+        .academicqualification table tr td{
+            background-color:#ff5050;
+            color:white;
+            
+        }
+
+        .technicalskills h4 {
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 20px;
+
+            text-transform: uppercase;
+            font-size: 22px;
+            color: white;
+            /* border-radius: 50%; */
+
+        }
+
+        .technical {
+            display: flex;
+            padding: 2px;
+            gap: 10px;
+            justify-content: center;
+            /* list-style: none; */
+
+        }
+
+        .technical .first {
+            flex: 0 0 160px;
+            box-shadow: 0 0 4px black;
+            list-style: none;
+            background-color:#ff3300;
+            color: white;
+        }
+        .technical .first h5{
+            background-color: #cc0000;
+            font-size: 18px;
+            color: white;
+        }
+        .technical .second {
+            flex: 0 0 150px;
+            box-shadow: 0 0 4px black;
+            list-style: none;
+            background-color: #ff3300;
+            color: white;
+        }
+        .technical .second h5{
+            background-color: #cc0000;
+            font-size: 18px;
+            color: white;
+        }
+        .technical .third {
+            flex: 0 0 200px;
+            box-shadow: 0 0 4px black;
+            list-style: none;
+            background-color: #ff3300;
+            color: white;
+        }
+        .technical .third h5{
+            background-color: #cc0000;
+            font-size: 18px;
+            color: white;
+        }
+        .skills h4{
+            background-color: #ff0066;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 20px;
+
+            text-transform: uppercase;
+            font-size: 22px;
+            color: white;
+
+        }
+        .skills ul{
+            list-style: none;
+            margin-left: 20px;
+            color: red;
+            font-size: 20px;
+        }
+
+
+
+
+       
+            
+    
+    </style>
+</head>
+
+<body>
+    <!-- resume portfolio -->
+
+    <div class="container">
+        <div class="resume">
+            
+                <div class="left">
+                    <div class="imagecontainer">
+
+                        <div class="img">
+                            <img src="Picsart_23-06-14_08-02-22-875.jpg" alt="">
+                        </div>
+                        <div class="detailscontainer">
+
+                            <h5> <i class="fa fa-user" aria-hidden="true"></i> Saurabh Kumar </h5>
+                            <h5> <i class="fa fa-address-card" aria-hidden="true"></i> Vill-Kharagpur Kalan , Bisalpur
+                                (Pilibhit)
+                                262201 ,up</h5>
+                            <h5> <i class="fa fa-envelope" aria-hidden="true"></i> saurabhk300605@gmail.com</h5>
+                            <h5><i class="fa fa-mobile" aria-hidden="true"></i> +9180570XXXXX</h5>
+                        </div>
+                    </div>
+                    <div class="personaldetails">
+                        <h4> Personal Details</h4>
+                        <ul>
+                            <li>DOB :- 30 June 2005 </li>
+                            <li> Language Known :- English , Hindi</li>
+                            <li> Sex :- Male</li>
+                            <li> Status :- Single</li>
+                        </ul>
+                    </div>
+                    <div class="hobbies">
+                        <h4> Hobbies </h4>
+                        <ul>
+                            <li> Reading </li>
+                            <li> Writing </li>
+                            <li> Photography </li>
+                            <li> Painting </li>
+                            <li> Sketching </li>
+                            <li> Learning Languages </li>
+                            <li> Video ediiting</li>
+
+                        </ul>
+                    </div>
+                </div>
+            
+            <div class="right">
+                <div class="careerobjective">
+
+                    <h4> Career Objective </h4>
+                    <p> Want to grow as great leader with greater ability to change the world . Self motivated developer, Experienced in providing encourage and direction to current and futre developer working towards humanitarian objectives. Commited to providing compassionate support while capitalizing on networking opportunities.Catalyst for chnage through Mobilizing Support to Achieve company initiatives.
+                       </p>
+                </div>
+
+                <div class="academicqualification">
+                    <h4> Academic Qualification </h4>
+                    <table border="1px">
+                        <tr>
+                            <th> &nbsp; &nbsp; Education &nbsp; &nbsp;</th>
+                            <th> &nbsp; &nbsp; Passing Year &nbsp; &nbsp; </th>
+                            <th> &nbsp; &nbsp; Board/university &nbsp; &nbsp; </th>
+                        </tr>
+                        <tr>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10th </td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2021</td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CBSE</td>
+                        </tr>
+                        <tr>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  12th</td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2023</td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CBSE</td>
+                        </tr>
+                        <tr>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btech </td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ............</td>
+                            <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AKTU</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="technicalskills">
+                    <h4> Technical Skills</h4>
+                    <div class="technical">
+                        <div class="first">
+                            <h5> &nbsp;  Web Development</h6>
+                            <ul type="none">
+                                <li>  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-html5" aria-hidden="true"></i> HTML</li>
+                                <li>  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-css3" aria-hidden="true"></i> CSS</li>
+                                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;React</li>
+                            </ul>
+                        </div>
+                        <div class="second">
+                            <h5> &nbsp; App Devlopment</h6>
+                            <ul type="none">
+                                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; React Native</li>
+                            </ul>
+                        </div>
+                        <div class="third">
+                            <h5> &nbsp; Programming Language</h6>
+                            <ul type="none">
+                                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Php</li>
+                                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Javascript</li>
+                                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;python</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h4> Personal skills</h4>
+                    <ul>
+                        <li> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Self Confidence and Goal Oriented .</li>
+                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Fast learner .</li>
+                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Ability to work with team .</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="note">
+            <p> I hereby Declare that all the facts given above are the true and correct to the best of my knowledge .</p>
+            <span>Date:-</span>
+            <span style="margin-left: 80%;">Signature</span>
+            <span style="margin-left: 80%;">Saurabh Kumar</span>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
